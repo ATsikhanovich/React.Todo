@@ -1,0 +1,9 @@
+.TodoList {
+    list-style-type: none;
+    padding: 0;
+
+    .FiltersPanel {
+        display: flex;
+        gap: 10px;
+    }
+}

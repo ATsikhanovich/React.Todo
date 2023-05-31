@@ -1,0 +1,18 @@
+.FilterButton {
+    button {
+      padding: 8px 12px;
+      background-color: #5d7fcd;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #2d226e;
+      }
+    }
+    .active {
+      font-weight: bold;
+      background-color: #2d226e;
+    }
+  }
