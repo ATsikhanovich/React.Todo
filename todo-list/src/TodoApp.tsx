@@ -1,5 +1,4 @@
 import TodoList from './components/TodoList/TodoList';
-//import './TodoApp.scss';
 import styles from './TodoApp.module.scss'
 
 const TodoApp: React.FC = () => {

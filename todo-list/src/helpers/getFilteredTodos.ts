@@ -12,9 +12,9 @@ export const getFilteredTodos = (
   
         case FilterType.COMPLETED:
           return todo.completed;
-  
+          
         default:
-          return todos;
+          return true;
       }
     });
   };
