@@ -11,6 +11,7 @@ interface TodoItemProps {
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
   return (
     <li className={styles.TodoItem}>
+      <input type="checkbox" checked={todo.completed} onChange={onToggle} />
       <span
         className={todo.completed ? styles.completed : ''}
         onClick={onToggle}

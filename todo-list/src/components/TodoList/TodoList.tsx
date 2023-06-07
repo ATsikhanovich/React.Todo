@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store'
 import { toggleTodo, deleteTodo, addTodo, loadTodos } from '../../store/todos';
 import TodoItem from '../TodoItem/TodoItem';
@@ -9,10 +8,11 @@ import { getFilteredTodos } from '../../helpers/getFilteredTodos';
 import FilterButton from '../FilterButton/FilterButton';
 import { loadTodosFromLocalStorage, saveTodosToLocalStorage } from '../../helpers/localStorage';
 import styles from './TodoList.module.scss';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
 const TodoList: React.FC = () => {
-  const todos = useSelector((state: RootState) => state.todos);
-  const dispatch = useDispatch();
+  const todos = useAppSelector((state: RootState) => state.todos);
+  const dispatch = useAppDispatch();
   const [filterType, setFilterType] = useState<FilterType>(FilterType.ALL);
 
   const visibleTodos = useMemo(() => {
