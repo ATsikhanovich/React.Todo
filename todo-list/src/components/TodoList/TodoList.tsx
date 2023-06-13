@@ -22,7 +22,7 @@ const TodoList: React.FC = () => {
   useEffect(() => {
     const items = loadTodosFromLocalStorage();
     dispatch(loadTodos(items))
-  },[]);
+  },[dispatch]);
 
   useEffect(() => {
       saveTodosToLocalStorage(todos.todos);

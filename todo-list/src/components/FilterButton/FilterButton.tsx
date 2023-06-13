@@ -1,5 +1,4 @@
 import React from 'react';
-import { Todo } from '../../store/todos';
 import { FilterType } from '../../enums/FilterType';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
@@ -18,7 +17,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({ filterType, currentFilter, 
 
     return (
         <div className={styles.FilterButton}>
-            <button className={currentFilter == filterType ? styles.active : ''} onClick={() => onClick(filterType)}>
+            <button className={currentFilter === filterType ? styles.active : ''} onClick={() => onClick(filterType)}>
                 {name}:{getFilteredTodos(todos, filterType).length}
             </button>
         </div>
